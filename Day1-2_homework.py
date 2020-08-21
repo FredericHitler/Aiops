@@ -22,7 +22,7 @@ print("""
 #
 # name = '51devops'
 # _ = 'echo'
-
+#
 # if 条件语句：
 #         满足条件执行的语句
 #     elif 条件语句：
@@ -30,75 +30,75 @@ print("""
 #     else：
 #         满足条件执行的语句
 
-# num = int(input("输入所猜数字："))
-# if num > 66:
-#     print("猜大了")
-# elif num < 66 :
-#     print("猜小了")
-# else:
-#     print("猜对了")
-#
-# achivement = int(input("请输入成绩："))
-# if achivement > 0:
-#     print('E')
-# elif achivement >39:
-#     print('D')
-# elif achivement >59:
-#     print('C')
-# elif achivement > 79:
-#     print('B')
-# elif 89 < achivement <= 100:
-#     print('A')
-#
-#
-# while 1:
-#     print(
-#     '''
-#     菜单：
-#         1：固网业务
-#         2：查话费
-#         3：话费充值
-#         *：退出
-#     ''')
-#     num = input("请选择：")
-#     if num == '1':
-#                 print('''
-#                 1.xxxxx
-#                 2.yyyyyyy
-#             ''')
-#     elif num == '2':
-#                 print('您的话费余额为：999999999999')
-#     elif num == '3':
-#                 input("请输入充值金额：")
-#                 print("充值成功")
-#     elif num == '*':
-#         print('结束')
-#         break
+num = int(input("输入所猜数字："))
+if num > 66:
+    print("猜大了")
+elif num < 66 :
+    print("猜小了")
+else:
+    print("猜对了")
+
+achivement = int(input("请输入成绩："))
+if achivement > 0:
+    print('E')
+elif achivement >39:
+    print('D')
+elif achivement >59:
+    print('C')
+elif achivement > 79:
+    print('B')
+elif 89 < achivement <= 100:
+    print('A')
+
+
+while 1:
+    print(
+    '''
+    菜单：
+        1：固网业务
+        2：查话费
+        3：话费充值
+        *：退出
+    ''')
+    num = input("请选择：")
+    if num == '1':
+                print('''
+                1.xxxxx
+                2.yyyyyyy
+            ''')
+    elif num == '2':
+                print('您的话费余额为：999999999999')
+    elif num == '3':
+                input("请输入充值金额：")
+                print("充值成功")
+    elif num == '*':
+        print('结束')
+        break
 # 第三章Python条件语句和运算符
 # 1.猜数字，设定一个理想数字比如：66，让用户输入数字，如果比66大，则显示猜测的结果大了；如果比66小，则显示猜测的结果小了;只有等于66，显示猜测结果正确，然后退出循环。
-# while 1:
-#     num = int(input("输入所猜数字："))
-#     if num > 66:
-#         print("猜大了")
-#     elif num < 66 :
-#         print("猜小了")
-#     else:
-#         print("猜对了")
-#         break
+while 1:
+    num = int(input("输入所猜数字："))
+    if num > 66:
+        print("猜大了")
+    elif num < 66 :
+        print("猜小了")
+    else:
+        print("猜对了")
+        break
 # # 2.在上一题的基础，设置：给用户三次猜测机会，如果三次之内猜测对了，则显示猜测正确，退出循环，如果三次之内没有猜测正确，则自动退出循环，并显示‘大笨蛋’。
-# count = 0
-# while count < 3:
-#     num = int(input("输入所猜数字："))
-#     count += 1
-#     if num > 66:
-#         print("猜大了")
-#     elif num < 66:
-#         print("猜小了")
-#     else:
-#         print("猜对了")
-#         break
-# else:
-#     print("笨蛋")
+count = 0
+while count < 3:
+    num = int(input("输入所猜数字："))
+    count += 1
+    if num > 66:
+        print("猜大了")
+    elif num < 66:
+        print("猜小了")
+    else:
+        print("猜对了")
+        break
+else:
+    print("笨蛋")
 
 # 3.使用两种方法实现输出 1 2 3 4 5 6 8 9 10 。
 for i in range(1, 11):
@@ -117,15 +117,62 @@ for i in range(1,101,2):
 for i in range(1,101,2):
     print(i)
 # 7.求1-2+3-4+5 … 99的所有数的和
-
+n = 0
+for i in range(1,100):
+    if i%2 ==0:
+        n += i
+    else:
+        n -= i
+print(n)
 # 8.⽤户登陆（三次输错机会）且每次输错误时显示剩余错误次数（提示：使⽤字符串格式化）
+i = 0
+while i < 3:
+    i += 1
+    pwd = input("请输入密码：")
+    if pwd == "123":
+        print("三号技师为您服务")
+    else:
+        print("密码错误，您还有{}次服务".format(3 - i))
+else:
+    print("暗号错误，不接待")
 
 # 9.猜年龄游戏
 # 要求：允许用户最多尝试3次，3次都没猜对的话，就直接退出，如果猜对了，打印恭喜信息并退出。
-#
+while 1:
+    num = int(input("输入所猜年龄："))
+    if num > 66:
+        print("猜大了")
+    elif num < 66 :
+        print("猜小了")
+    else:
+        print("猜对了")
+        break
 
 # 10.猜年龄游戏升级版
 # 要求：允许用户最多尝试3次，每尝试3次后，如果还没猜对，就问用户是否还想继续玩，如果回答Y，就继续让其猜3次，以此往复，如果回答N，就退出程序，如何猜对了，就直接退出。
+
+while 1:
+    i = 0
+    while i < 3:
+        i += 1
+        num = int(input("输入所猜数字："))
+        if num > 66:
+            print("猜大了")
+        elif num < 66 :
+            print("猜小了")
+        else:
+            print("猜对了")
+            break
+    else:
+        ans = input("还想要么？")
+        if ans == "Y":
+            continue
+        else:
+            break
+
+
+
+
 
 # 第四章Python的数据类型之字符串和整型
 name = "szk zeNb "
@@ -208,7 +255,8 @@ print("是的") if str1.endswith("Nb") else print("不是")
 name = "lpsdfafa"
 print(name.replace("l","p"))
 # 写代码实现对用户输入的值判断，是否为十进制小数（isdecimal），如果是则转换为整型并输入，否则直接输出"请输入数字"
-
+in_text = input("请输入内容：")
+print(int(in_text)//0) if in_text.isdecimal() else print("请输入数字")
 # 对用户输入的数据使用"+"切割，判断输入的值是否都是数字？	提示：用户输入的格式必须是以+连接，如 5+9 、devops+999
 num = input("请输入内容：（请用+连接）")
 for i in num.split("+"):
