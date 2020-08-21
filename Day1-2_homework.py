@@ -1,3 +1,44 @@
+# 第四章Python的数据类型之字符串和整型
+str
+
+name = "szk zeNb "
+# 移除 name 变量对应的值两边的空格,并输出处理结果
+print(name.strip())
+# 判断 name 变量是否以 “sz” 开头,并输出结果（用切片）
+name.startswith("sz")
+print(name[0:3] == "sz")
+# 判断name变量是否以”Nb”结尾,并输出结果（用切片）
+print(name[-1:-3] == "Nb")
+# 将 name 变量对应的值中的 所有的”z” 替换为 “p”,并输出结果
+print(name.replace("z","p"))
+# 将name变量对应的值中的第一个”z”替换成”p”,并输出结果
+print(name.replace("z","p",1))
+# 将 name 变量对应的值根据 所有的”z” 分割,并输出结果
+a = name.split("z")
+print(a)
+# 将name变量对应的值根据第一个”z”分割,并输出结果
+print(name.split("z",1))
+# 将 name 变量对应的值变大写,并输出结果
+print(name.upper())
+# 将 name 变量对应的值变小写,并输出结果
+print(name.lower())
+# 请输出 name 变量对应的值的第 2 个字符?
+print(name[1])
+# 请输出 name 变量对应的值的前 3 个字符?
+print(name[0:3])
+# 请输出 name 变量对应的值的后 2 个字符?
+print(name[-3:])
+
+s = "123a4b5c"
+# 通过对s切片形成新的字符串 “123”
+new_s = s[0:3]
+print(new_s)
+# 通过对s切片形成新的字符串 “a4b”
+new_s = s[3:6]
+print(new_s)
+# 通过对s切片形成字符串s5,s5 = “c”
+new_s = s[-1]
+# 通过对s切片形成字符串s6,s6 = “ba2”
 
 a = 0
 for i in range(11):
